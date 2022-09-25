@@ -1,0 +1,252 @@
+/*Universal selectors*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-background-color: #FFFAF0;
+    --header-gradient: linear-gradient(lightskyblue, dodgerblue);
+    --img-text-box: dodgerblue;
+    --img-text: white;
+    --title-font: serif;
+    --font-Andborder-color: midnightblue
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--main-background-color);
+}
+
+/*Header*/
+
+header {
+    background-image: var(--header-gradient);
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 6rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-family: var(--title-font);
+    color: var(--font-Andborder-color)
+}
+
+/*Nav*/
+
+.nav ul {
+    text-align: center;
+}
+
+.nav li {
+    display: inline;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.nav li a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    font-family: var(--title-font);
+    font-weight: 800;
+}
+
+.nav li a:hover {
+    font-weight: bold;
+    color: white;
+}
+
+/*Main section*/
+
+main {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.divider {
+    background-color: var(--font-Andborder-color);
+    height: .3rem;
+    margin: 2rem;
+}
+
+/*Section titles*/
+h2 {
+    font-size: 4rem;
+    font-family: var(--title-font);
+    color: var(--font-Andborder-color)
+}
+
+/*About Me section*/
+
+.about-me {
+    display: flex;
+}
+
+.about-me img {
+    border: .3rem solid var(--font-Andborder-color);
+    border-radius: 50%;
+    height: 35rem;
+    width: 40rem;
+}
+
+.about-me p {
+    padding-left: 2.5rem;
+    padding-top: 5rem;
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+    text-align: left;
+    color: var(--font-Andborder-color);
+}
+
+/*My Work section*/
+
+.my-work {
+    display: flexbox;
+    flex: 1 0 100%;
+}
+
+.my-work a {
+    display: inline-block;
+    flex-wrap: wrap;
+    margin: 1rem;
+    position: relative;
+}
+
+/*All work screenshot imgs except the first one*/
+.my-work a img {
+    border: .3rem solid var(--font-Andborder-color);
+    width: 59rem;
+    height: auto;
+    display: flex;
+    
+}
+
+/*Hover effect for all work screenshot imgs*/
+.my-work a img:hover {
+    border-color: var(--font-Andborder-color);
+    box-shadow: 0 0 1rem dodgerblue, 0 0 1rem dodgerblue;
+}
+
+/*All screenshot img textbox titles*/
+.work-title {
+    font-size: 2.5rem;
+}
+
+/*All screenshot img textbox descriptions*/
+.work-desc {
+    font-size: 1.5rem;
+}
+
+/*First screenshot img size*/
+.my-work a #first-app {
+    width: 120rem;
+    height: auto;
+}
+
+/*Textboxes for all Screenshot img*/
+.work-text-box {
+    position: absolute;
+    background-color: var(--img-text-box);
+    color: var(--img-text);
+    width: 30rem;
+    padding: .4rem;
+    margin-left: 0;
+
+}
+
+/*Contact Me section*/
+
+.contact-me p {
+    display: inline;
+    font-size: 1.8rem;
+    margin: 0 4rem;
+    color: var(--font-Andborder-color);
+}
+
+.contact-me a {
+    text-decoration: none;
+    color: var(--font-Andborder-color);
+}
+
+.contact-me a:hover {
+    font-weight: bold;
+    color: dodgerblue;
+}
+
+/*Media query for mobile*/
+@media screen and (max-width:60rem) {
+    /*Main margins*/
+    main {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    /*About me section*/
+    .about-me {
+        display: block;
+    }
+
+    .about-me img {
+        width: 17rem;
+        height: 30rem;
+    }
+
+    /*My work section*/
+    .work-text-box {
+        flex: 0 0 50%;
+        margin-left: 27%;
+        max-width: 50%;
+    }
+    .my-work a #first-app {
+        flex: 0 0 50%;
+        max-width: 100%;   
+        
+    }
+    .my-work a img {
+        margin: auto;
+        flex: 0 0 50%;
+        max-width: 80%;
+    }
+
+    /*Contact me section*/
+    .contact-me p,
+    .contact-me p a {
+        display: block;
+    }
+}
+
+/*Media query for tablet*/
+@media screen and (max-width:96rem) {
+    /*My work section*/
+    .my-work a img {
+        margin: auto;
+        flex: 0 0 50%;
+        max-width: 85%;
+    }
+
+    .my-work a #first-app {
+        flex: 0 0 50%;
+        max-width: 100%;
+    }
+    .work-text-box {
+        flex: 0 0 50%;
+        margin-left: 25%;
+    }
+}
