@@ -9,5 +9,5 @@ This application was made to present my work in a professional portfolio that wi
 n/a
 
 ## Usage
-
-**Deploy application:** 
+![](assets/jareds-portfolio.png) <br>
+**Deploy application:** https://jkim011.github.io/jareds-portfolio/
